@@ -1,0 +1,183 @@
+.optionen{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+    width: 360px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 30px;
+}
+
+.opt_titel{
+    margin-bottom: 20px;
+
+    font-size: 26px;
+}
+
+#opt_passwort{
+    display: flex;
+    flex-direction: column;
+
+    /* border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-color: brown; */
+}
+
+.btn_open_arrow{
+    position: relative;
+}
+
+i{
+    border-style: solid;
+    border-width: 0;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+
+    width: 15px;
+    height: 15px;
+
+    display: inline-block;
+
+    position: absolute;
+    top: 17px;
+    left: 10px;
+
+    z-index: 1;
+    
+    transition: 0.2s;
+}
+
+.arrowRight{
+    transform: rotate(-45deg);
+}
+
+.arrowDown{
+    transform: rotate(45deg);
+}
+
+.btn_open{
+    height: 53px;
+    width: 100%;
+
+    font-size: 30px;
+
+    background: rgb(98, 157, 247);
+
+    border-width: 0;
+
+    position: relative;
+ 
+    transition: 0.5s;
+}
+
+.btn_open:hover{
+    background: rgb(111, 167, 250); 
+    box-shadow: 2px 2px 3px 1px rgba(24,24,24,0.4); 
+}
+
+.btn_open .btn_svg{
+    position: absolute;
+    left: 10px;
+    background: #000;
+}
+
+.form_passwort_ändern{
+    display: flex;
+    flex-direction: column;
+    
+    height: 0px;
+    overflow: hidden;
+    background: rgb(149, 77, 231);
+
+    border-style: solid;
+    border-color: rgb(137, 70, 212);
+    border-width: 1px;
+    border-top: 0;
+    border-right: 0;
+
+    transition: 0.4s;    
+}
+
+#first_input{
+    padding-top: 20px;
+}
+
+.inputfield{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 30px;
+}
+
+.inputfield label{
+    margin-bottom: 15px;
+}
+
+.inputfield input{
+    height: 53px;
+    font-size: 25px;
+
+    background-color: rgb(140, 72, 218);
+
+    border-color: rgb(106, 20, 204);
+    border-bottom-width: 3px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+
+    transition: 0.3s;
+}
+
+.inputfield input:focus{
+    border-color: rgb(147, 105, 196);
+    box-shadow: inset 0px 0px 3px 0px rgba(24, 24, 24, 0.767);
+}
+
+.btn_big{
+    height: 53px;
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    font-size: 30px;
+
+    background: rgb(98, 157, 247);
+
+    border-width: 0;
+
+    box-shadow: 1px 4px 5px 1px rgba(24,24,24,0.5);
+
+    transition: 0.5s;
+}
+
+.btn_big:hover{
+    background: rgb(111, 167, 250); 
+    box-shadow: 2px 5px 6px 2px rgba(24,24,24,0.4); 
+}
+
+/*  
+Breite des Formulars an Handys angepasst.
+Breite in Prozent angegeben, damit es besser an alle
+möglichen zukünftigen Bildschirme angepasst ist.
+*/
+@media(max-width:568px){
+    .optionen{
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 6%;
+    }
+}
+
+/* Horizontale ausrichtung für Handys ist nicht unterstützt und müsste genau hier
+mit einer Meidaquery (@media(...)) eingefügt werden. Da dies aber unverhältnismässig wenig
+genutzt werden würde, lasse ich bewusst die Unterstützung für dieses Bildschirmformat aus. */
